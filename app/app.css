@@ -28,3 +28,55 @@
   content: "";
   padding: 0;
 }
+/*html {*/
+  /*background: url(images/americanflagedited.jpg) no-repeat center center fixed;*/
+  /*-webkit-background-size: cover;*/
+  /*-moz-background-size: cover;*/
+  /*-o-background-size: cover;*/
+  /*background-size: cover;*/
+/*}*/
+
+.floatingtexttest {
+  z-index: 100;
+  color: white;
+  font-weight: bold;
+
+}
+/*body {*/
+  /*background-image: url(images/americanflagedited.jpg);*/
+/*}*/
+
+.navbar-default {
+  border-color: inherit;
+  background-color: inherit;
+}
+body {
+  background-color: inherit;
+  color: inherit;
+}
+
+#a {
+  background-image: url(images/americanflagedited.jpg);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+#b {
+  background-color: red;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+#c {
+  background-color: blue;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+#d {
+  background-color: #ffff00;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+#e {
+  background-color: #008000;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
