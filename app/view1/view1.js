@@ -2,12 +2,11 @@
 
 angular.module('myApp.view1', ['ngRoute'])
 
-    .config(['$routeProvider', 'Restangular', function ($routeProvider, Restangular) {
+    .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/view1', {
             templateUrl: 'view1/view1.html',
             controller: 'View1Ctrl'
         });
-        Restangular.setBaseUrl('http://www.googleapis.com');
     }])
 
     .factory('Query', function($http, Restangular, $q) {
@@ -35,10 +34,10 @@ angular.module('myApp.view1', ['ngRoute'])
     //
     //})
 
-    .controller('View1Ctrl', [function (Query) {
+    .controller('View1Ctrl', ['Query', function (Query) {
         var query = Query.repQuery("variable").then(function (data){
             $scope.reps = data;
         }, function(error){
-            code
+            //code
         })
     }]);
