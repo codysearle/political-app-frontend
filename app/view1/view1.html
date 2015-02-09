@@ -6,6 +6,7 @@
     Enter Address: <input class="form-control" type="text" ng-model="address">
     <button class="btn btn-danger" ng-click="pushAddress(address)">Add Address</button>
     <p ng-repeat="official in officials">
+        {{ official.title }} :
         {{ official.name }}
     </p>
 </div>
