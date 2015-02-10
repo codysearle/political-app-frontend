@@ -1,82 +1,156 @@
 /* app css stylesheet */
 
 .menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+    list-style: none;
+    border-bottom: 0.1em solid black;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
 }
 
 .menu:before {
-  content: "[";
+    content: "[";
 }
 
 .menu:after {
-  content: "]";
+    content: "]";
 }
 
 .menu > li {
-  display: inline;
+    display: inline;
 }
 
 .menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
+    content: "|";
+    padding-right: 0.3em;
 }
 
 .menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
+    content: "";
+    padding: 0;
 }
-/*html {*/
-  /*background: url(images/americanflagedited.jpg) no-repeat center center fixed;*/
-  /*-webkit-background-size: cover;*/
-  /*-moz-background-size: cover;*/
-  /*-o-background-size: cover;*/
-  /*background-size: cover;*/
-/*}*/
+
+html {
+    background: url(images/capitolbuilding.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
 .floatingtexttest {
-  z-index: 100;
-  color: white;
-  font-weight: bold;
+    z-index: 100;
+    color: white;
+    font-weight: bold;
 
 }
+
 /*body {*/
-  /*background-image: url(images/americanflagedited.jpg);*/
+/*background-image: url(images/americanflagedited.jpg);*/
 /*}*/
 
 .navbar-default {
-  border-color: inherit;
-  background-color: inherit;
+    border-color: inherit;
+    background-color: inherit;
 }
+
 body {
-  background-color: inherit;
-  color: inherit;
+    background-color: inherit;
+    color: inherit;
 }
 
 #a {
-  background-image: url(images/americanflagedited.jpg);
-  padding-top: 30px;
-  padding-bottom: 30px;
+    background-image: url(images/americanflagedited.jpg);
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
+
 #b {
-  background-color: red;
-  padding-top: 30px;
-  padding-bottom: 30px;
+    background-color: red;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
+
 #c {
-  background-color: blue;
-  padding-top: 30px;
-  padding-bottom: 30px;
+    background-color: blue;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
+
 #d {
-  background-color: #ffff00;
-  padding-top: 30px;
-  padding-bottom: 30px;
+    background-color: #ffff00;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
+
 #e {
-  background-color: #008000;
-  padding-top: 30px;
-  padding-bottom: 30px;
+    background-color: #008000;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
+
+.company_title {
+    font-family: 'tinymce', Arial;
+    color: red;
+    font-weight: bold;
+}
+
+.blah {
+    text-align: right;
+}
+
+.feed_color_body {
+    background-color: rgba(225, 225, 225, .95);
+    /*background-image: url(images/americanflag.jpg);*/
+}
+
+.feed_color_head {
+    border-color: black;
+    color: rgb(150, 0, 0);
+}
+
+.feed_color_head_dem {
+    border-color: black;
+    color: rgb(0, 0, 150);
+}
+
+.navcolor {
+    color: black;
+}
+/*.view-animate-container {*/
+/*position:relative;*/
+/*height:100px!important;*/
+/*background:white;*/
+/*border:1px solid black;*/
+/*height:40px;*/
+/*overflow:hidden;*/
+/*}*/
+
+/*.view-animate {*/
+/*padding:10px;*/
+/*}*/
+
+/*.view-animate.ng-enter, .view-animate.ng-leave {*/
+/*-webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;*/
+/*transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;*/
+
+/*display:block;*/
+/*width:100%;*/
+/*border-left:1px solid black;*/
+
+/*position:absolute;*/
+/*top:0;*/
+/*left:0;*/
+/*right:0;*/
+/*bottom:0;*/
+/*padding:10px;*/
+/*}*/
+
+/*.view-animate.ng-enter {*/
+/*left:100%;*/
+/*}*/
+/*.view-animate.ng-enter.ng-enter-active {*/
+/*left:0;*/
+/*}*/
+/*.view-animate.ng-leave.ng-leave-active {*/
+/*left:-100%;*/
+/*}*/
