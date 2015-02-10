@@ -57,27 +57,6 @@ angular.module('myApp.view1', ['ngRoute', 'restangular'])
         return query;
     })
 
-    //.factory('TweetQuery', function($http, SwitchRestangular, $q, $scope) {
-    //
-    //})
-
-    //.factory('RepQuery', function (Restangular, $q) {
-    //    return function (queryString) {
-    //        // create a promise object using $q
-    //        var deferred = $q.defer();
-    //        Restangular.one('civicinfo/v2/representatives?key=AIzaSyD-HPE_alWclw0dk45SVc87VhH1FJT-j5o&address=' + queryString)
-    //            .get()
-    //            .then(function (data) {
-    //                // resolve the promise that you created
-    //                deferred.resolve(data);
-    //            }, function(data){
-    //                deferred.reject(data);
-    //            });
-    //
-    //        // return the empty promise, yet to be resolved
-    //        return deferred.promise;
-    //    }
-    //})
 
     .controller('View1Ctrl', ['Query', '$scope', function (Query, $scope) {
 
