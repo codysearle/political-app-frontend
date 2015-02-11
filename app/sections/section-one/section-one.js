@@ -1,4 +1,4 @@
-angular.module('myApp.sections')
+angular.module('myApp.sections', [])
 
     .controller('sectionOneCtrl', ['$scope', function ($scope) {
         $scope.name = "Barack Obama";
