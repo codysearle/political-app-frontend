@@ -9,7 +9,7 @@ angular.module('myApp.view1', ['ngRoute'])
         });
     }])
 
-    .factory('Query', function($http, Restangular, $q) {
+    .factory('Query', function ($http, Restangular, $q) {
         var query = [];
 
         query.repQuery = function (queryString) {
@@ -25,9 +25,8 @@ angular.module('myApp.view1', ['ngRoute'])
                 });
 
             return deferred.promise;
-
+        };
         return query;
-        }
     })
 
     //.factory('TweetQuery', function($http, SwitchRestangular, $q, $scope) {
@@ -35,9 +34,9 @@ angular.module('myApp.view1', ['ngRoute'])
     //})
 
     .controller('View1Ctrl', ['Query', function (Query) {
-        var query = Query.repQuery("variable").then(function (data){
+        var query = Query.repQuery("variable").then(function (data) {
             $scope.reps = data;
-        }, function(error){
+        }, function (error) {
             //code
         })
     }]);
