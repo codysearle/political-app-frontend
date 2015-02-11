@@ -64,4 +64,37 @@
 <!--<section>h</section>-->
 <!--<section>u</section>-->
 <!--<section>j</section>-->
-<!--<section>k</section>-->
+<!--<section>k</section>--><p>This is the partial for view 1.</p>
+{#<div ng-repeat="view1 in data">#}
+{#</div>#}
+
+<div class="form-inline">
+    Enter Address: <input class="form-control" type="text" ng-model="address">
+    <button class="btn btn-danger" ng-click="pushAddress(address)">Add Address</button>
+    <p ng-repeat="official in officials",>
+        <img class="officialimg" src="{{official.photoUrl}}">
+        {{ official.name }} :
+        {{ official.email }} :
+        {{ official.phone }}
+        {{ official.party }} :
+        {{ official.urls }} :
+        {{ official.address }}
+
+    </p>
+</div>
+
+<!--<div class="form-inline">-->
+    <!--Enter Address: <input class="form-control" type="text" ng-model="address">-->
+    <!--<button class="btn btn-primary" ng-click="pushAddress(address)">Add Address</button>-->
+    <!--<p ng-repeat="location in pollingLocations",>-->
+        <!--{{ location.address }} :-->
+    <!--</p>-->
+<!--</div>-->
+
+<div class="form-inline">
+    Enter Address: <input class="form-control" type="text" ng-model="address">
+    <button class="btn btn-info" ng-click="pushAddress(address)">Add Address</button>
+    <p ng-repeat="id in elections",>
+        <!--{{ id.elections }} :-->
+    </p>
+</div>
