@@ -5,16 +5,14 @@ angular.module('myApp', [
     'ngRoute',
     'myApp.view1',
     'myApp.view2',
+	'myApp.landingPage',
     'myApp.sections',
-    'myApp.test',
     'myApp.version',
     'restangular'
+  
 ]).
-    config(['$routeProvider', 'RestangularProvider', function ($routeProvider, RestangularProvider) {
-        $routeProvider.otherwise({redirectTo: '/view1'});
+config(['$routeProvider', function($routeProvider) {
+  $routeProvider.otherwise({redirectTo: '/landing-page'});
+}]);
 
-        RestangularProvider.setBaseUrl('http://localhost:8004');
-    }]);
 
-angular.module('myApp.sections', []);
-angular.module('myApp.test', []);

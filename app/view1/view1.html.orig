@@ -1,0 +1,100 @@
+<div ng-controller="View2Ctrl">
+<span this-test></span>
+</div>
+<div ng-controller="sectionOneCtrl">
+    <div ng-include="'sections/section-one/section-one.html'"></div>
+</div>
+<div ng-controller="sectionTwoCtrl">
+<span this-test></span>
+</div>
+<div ng-controller="View2Ctrl">
+<span this-test></span>
+</div>
+<div ng-controller="sectionOneCtrl">
+    <div ng-include="'sections/section-one/section-one.html'"></div>
+</div>
+<div ng-controller="View2Ctrl">
+<span this-test></span>
+</div>
+<div ng-controller="sectionOneCtrl">
+    <div ng-include="'sections/section-one/section-one.html'"></div>
+</div>
+<div ng-controller="View2Ctrl">
+<span this-test></span>
+</div>
+<div ng-controller="sectionOneCtrl">
+    <div ng-include="'sections/section-one/section-one.html'"></div>
+</div>
+<div ng-controller="View2Ctrl">
+<span this-test></span>
+</div>
+<div ng-controller="sectionOneCtrl">
+    <div ng-include="'sections/section-one/section-one.html'"></div>
+</div>
+<div ng-controller="View2Ctrl">
+<span this-test></span>
+</div>
+<div ng-controller="sectionOneCtrl">
+    <div ng-include="'sections/section-one/section-one.html'"></div>
+</div>
+<div ng-controller="View2Ctrl">
+<span this-test></span>
+</div>
+<div ng-controller="sectionOneCtrl">
+    <div ng-include="'sections/section-one/section-one.html'"></div>
+</div>
+<div ng-controller="View2Ctrl">
+<span this-test></span>
+</div>
+<div ng-controller="sectionOneCtrl">
+    <div ng-include="'sections/section-one/section-one.html'"></div>
+</div>
+
+<!--<div class="view-animate-container">-->
+    <!--<div ng-view class="view-animate"></div>-->
+<!--</div>-->
+
+<!--<div ng-include="'sections/section-one/section-one.html'"></div>-->
+<!--<div ng-include="'sections/section-two/section-two.html'"></div>-->
+<!--<section id="c">c</section>-->
+<!--<section id="d">d</section>-->
+<!--<section id="e">e</section>-->
+<!--<section id="f">f</section>-->
+<!--<section>g</section>-->
+<!--<section>h</section>-->
+<!--<section>u</section>-->
+<!--<section>j</section>-->
+<!--<section>k</section>--><p>This is the partial for view 1.</p>
+{#<div ng-repeat="view1 in data">#}
+{#</div>#}
+
+<div class="form-inline">
+    Enter Address: <input class="form-control" type="text" ng-model="address">
+    <button class="btn btn-danger" ng-click="pushAddress(address)">Add Address</button>
+    <p ng-repeat="official in officials",>
+        <img class="officialimg" src="{{official.photoUrl}}">
+        {{ official.name }} :
+        {{ official.email }} :
+        {{ official.phone }}
+        {{ official.party }} :
+        {{ official.urls }} :
+        {{ official.address }}
+
+    </p>
+</div>
+
+<!--<div class="form-inline">-->
+    <!--Enter Address: <input class="form-control" type="text" ng-model="address">-->
+    <!--<button class="btn btn-primary" ng-click="pushAddress(address)">Add Address</button>-->
+    <!--<p ng-repeat="location in pollingLocations",>-->
+        <!--{{ location.address }} :-->
+    <!--</p>-->
+<!--</div>-->
+
+<div class="form-inline">
+    Enter Address: <input class="form-control" type="text" ng-model="address">
+    <button class="btn btn-info" ng-click="pushAddress(address)">Add Address</button>
+    <p ng-repeat="id in elections",>
+        <!--{{ id.elections }} :-->
+    </p>
+</div>
