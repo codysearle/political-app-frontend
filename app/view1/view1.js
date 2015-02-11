@@ -15,14 +15,21 @@ angular.module('myApp.view1', ['ngRoute', 'restangular'])
         })
     })
 
-    //.factory('VoteRestangular', function (Restangular) {
+    //.factory('VoterRestangular', function (Restangular) {
     //    return Restangular.withConfig(function (RestangularConfigurer) {
     //        RestangularConfigurer.setBaseUrl('https://www.googleapis.com');
     //    })
     //})
-    //VoteRestangular
+    //VoterRestangular(return this to factory header)
 
-    .factory('Query', function(RepRestangular, $q) {
+    .factory('ElectionRestangular', function (Restangular) {
+        return Restangular.withConfig(function (RestangularConfigurer) {
+            RestangularConfigurer.setBaseUrl('https://www.googleapis.com');
+        })
+    })
+
+
+    .factory('Query', function(RepRestangular, $q, ElectionRestangular) {
 
         var query = [];
 
@@ -40,9 +47,9 @@ angular.module('myApp.view1', ['ngRoute', 'restangular'])
             return deferred.promise;
         };
 
-        //query.voteQuery = function (queryString) {
+        //query.voterQuery = function (queryString) {
         //    var deferred = $q.defer();
-        //    VoteRestangular.one('civicinfo/v2/representatives?key=AIzaSyD-HPE_alWclw0dk45SVc87VhH1FJT-j5o&address=' + queryString)
+        //    VoterRestangular.one('civicinfo/v2/voterinfo?key=AIzaSyD-HPE_alWclw0dk45SVc87VhH1FJT-j5o&address=' + queryString)
         //        .get()
         //        .then(function (data) {
         //            deferred.resolve(data);
@@ -54,7 +61,22 @@ angular.module('myApp.view1', ['ngRoute', 'restangular'])
         //    return deferred.promise;
         //};
 
+        query.electionQuery = function (queryString) {
+            var deferred = $q.defer();
+            ElectionRestangular.one('civicinfo/v2/elections?key=AIzaSyD-HPE_alWclw0dk45SVc87VhH1FJT-j5o&address=' + queryString)
+                .get()
+                .then(function (data) {
+                    deferred.resolve(data);
+                }, function (error) {
+                    alert("error " + error);
+                    deferred.reject(error)
+                });
+
+            return deferred.promise;
+        };
+
         return query;
+
     })
 
 
@@ -66,6 +88,18 @@ angular.module('myApp.view1', ['ngRoute', 'restangular'])
 
             Query.repQuery(address).then(function (data){
                 $scope.officials = data.officials;
+            }, function(error){
+                //code
+            });
+
+            //Query.voterQuery(address).then(function (data){
+            //    $scope.pollingLocations = data.pollingLocations;
+            //}, function(error){
+            //    //code
+            //});
+
+            Query.electionQuery(address).then(function (data){
+                $scope.elections = data.elections;
             }, function(error){
                 //code
             });
