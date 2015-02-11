@@ -30,7 +30,7 @@
 }
 
 html {
-    background: url(images/capitolbuilding.jpg) no-repeat center center fixed;
+    /*background: url(images/capitolbuilding.jpg) no-repeat center center fixed;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -214,4 +214,18 @@ body {
     border-color: #e7e7e7;
 }
 
+.navbar-default .navbar-nav > li > a {
+    color: #e7e7e7
+}
 
+.navbar-default .navbar-nav > li > a:hover {
+    color: #c1bcbc
+}
+
+.navbar-default .navbar-brand {
+    color: #e7e7e7
+}
+
+.navbar-default .navbar-brand:hover {
+    color: #c1bcbc
+}
