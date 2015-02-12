@@ -29,7 +29,7 @@ angular.module('myApp.view1', ['ngRoute', 'restangular'])
     })
 
 
-    .factory('Query', function(RepRestangular, $q, ElectionRestangular) {
+    .factory('Query', function (RepRestangular, $q, ElectionRestangular) {
 
         var query = [];
 
@@ -46,7 +46,7 @@ angular.module('myApp.view1', ['ngRoute', 'restangular'])
 
             return deferred.promise;
         };
-        
+
 
         //query.voterQuery = function (queryString) {
         //    var deferred = $q.defer();
@@ -77,7 +77,7 @@ angular.module('myApp.view1', ['ngRoute', 'restangular'])
         };
 
         return query;
-        
+
     })
 
 
@@ -85,13 +85,23 @@ angular.module('myApp.view1', ['ngRoute', 'restangular'])
 
         $scope.address = '';
 
-        $scope.pushAddress = function(address) {
+        $scope.pushAddress = function (address) {
 
-            Query.repQuery(address).then(function (data){
-                $scope.officials = data.officials;
-            }, function(error){
+            Query.repQuery(address).then(function (data) {
+                $scope.offices = data.offices;
+            }, function (error) {
                 //code
             });
+            Query.repQuery(address).then(function (data) {
+                $scope.officials = data.officials;
+            }, function (error) {
+                //code
+            });
+            //Query.repQuery(address).then(function (data) {
+            //    $scope.offices = data.offices;
+            //}, function (error) {
+            //    //code
+            //});
 
             //Query.voterQuery(address).then(function (data){
             //    $scope.pollingLocations = data.pollingLocations;
@@ -99,11 +109,11 @@ angular.module('myApp.view1', ['ngRoute', 'restangular'])
             //    //code
             //});
 
-            Query.electionQuery(address).then(function (data){
-                $scope.elections = data.elections;
-            }, function(error){
-                //code
-            });
+            //Query.electionQuery(address).then(function (data) {
+            //    $scope.elections = data.elections;
+            //}, function (error) {
+            //    //code
+            //});
         }
 
     }]);

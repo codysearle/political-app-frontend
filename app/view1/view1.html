@@ -74,35 +74,44 @@
 <div class="form-inline">
     <div class="panel panel col-md-4 col-md-offset-4 feed_color_body">
         <div class="panel-heading feed_color_head_dem">
-            <div class="panel-title">Tell us where you live</div></div>
-            <div class="panel-body">
-                <input class="form-control" type="text" ng-model="address"/>
-                <br>
-                <button class="btn btn-default" ng-click="pushAddress(address)">Find your Reps</button>
-            </div>
+            <div class="panel-title">Tell us where you live</div>
+        </div>
+        <div class="panel-body">
+            <input class="form-control" type="text" ng-model="address"/>
+            <br>
+            <button class="btn btn-default" ng-click="pushAddress(address)">Find your Reps</button>
+        </div>
 
     </div>
 </div>
 <div ng-repeat="official in officials">
+    <!--<div ng-repeat="offical in officials">-->
+        <!--<div ng-repeat="office in offices">-->
+            <!--{{official}}-->
 
-    <div id="testasdf">
-        <div class="panel panel col-md-4 col-md-offset-4 feed_color_body">
-            <div class="panel-heading feed_color_head_dem">
-                <h3 class="panel-title"><img class="officialimg circular" src="{{official.photoUrl}}"/>
-                    {{ official.name }}, {{ official.party }}</h3>
-            </div>
-            <div class="panel-body">
-                Email: {{ official.address }}
-                <br>
-                Vote: {{vote}}
-                <br>
-                Bill: {{bill}}
-                <br>
-                Floor Statements: "{{comment}}"
-            </div>
-        </div>
+            <div id="testasdf">
+                <div class="panel panel col-md-4 col-md-offset-4 feed_color_body">
+                    <div class="panel-heading feed_color_head_dem">
+                        <h3 class="panel-title"><img class="officialimg circular" src="{{official.photoUrl}}"/>
+                            {{ official.name }}, {{ official.party }}</h3>
+                    </div>
+
+                    <div class="panel-body">
+                        <div ng-repeat="office in offices.name">Phone: {{ name }}</div>
+                        <br>
+
+                        <div ng-repeat="email in official.emails">Email: {{ email }}</div>
+                        <br>
+
+                        <div ng-repeat="channel in official.channels">{{ channel.type }}: {{ channel.id }}</div>
+                        <br>
+
+                        <div ng-repeat="phone in official.phones">Phone: {{ phone }}</div>
+                    </div>
+                </div>
+            <!--</div>-->
+        <!--</div>-->
     </div>
-
     <!--<div>-->
     <!--<img class="officialimg" src="{{official.photoUrl}}"/>-->
     <!--{{ official.name }} :-->
