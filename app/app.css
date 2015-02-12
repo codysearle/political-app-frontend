@@ -118,6 +118,9 @@ body {
 }
 
 .officialimg {
-    height: 300px;
-    width: 300px;
+    width: 75px;
+	height: 75px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
 }

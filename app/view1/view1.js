@@ -33,9 +33,9 @@ angular.module('myApp.view1', ['ngRoute', 'restangular'])
 
         var query = [];
 
-        query.repQuery = function (queryString) {
+        query.repQuery = function (QueryString) {
             var deferred = $q.defer();
-            RepRestangular.one('civicinfo/v2/representatives?key=AIzaSyD-HPE_alWclw0dk45SVc87VhH1FJT-j5o&address=' + queryString)
+            RepRestangular.one('civicinfo/v2/representatives?key=AIzaSyD-HPE_alWclw0dk45SVc87VhH1FJT-j5o&address=' + QueryString)
                 .get()
                 .then(function (data) {
                     deferred.resolve(data);
@@ -62,9 +62,9 @@ angular.module('myApp.view1', ['ngRoute', 'restangular'])
         //    return deferred.promise;
         //};
 
-        query.electionQuery = function (queryString) {
+        query.electionQuery = function (QueryString) {
             var deferred = $q.defer();
-            ElectionRestangular.one('civicinfo/v2/elections?key=AIzaSyD-HPE_alWclw0dk45SVc87VhH1FJT-j5o&address=' + queryString)
+            ElectionRestangular.one('civicinfo/v2/elections?key=AIzaSyD-HPE_alWclw0dk45SVc87VhH1FJT-j5o&address=' + QueryString)
                 .get()
                 .then(function (data) {
                     deferred.resolve(data);

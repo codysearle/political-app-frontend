@@ -2,7 +2,10 @@ angular.module('myApp.sections')
 
     .directive('thisTest', function () {
         return {
-            //require: '^ngModel',
+            require: '^address',
+            scope: {
+                address: '='
+            },
             templateUrl: 'view2/view2.html'
         }; // Reroute templateUrl
     }); // Directive

@@ -9,12 +9,12 @@ angular.module('myApp.view2', ['ngRoute'])
         });
     }])
 
-    .controller('View2Ctrl', ['$scope', function ($scope) {
-        $scope.name = "Orrin Hatch";
-        $scope.party = "R";
-        $scope.tweet = "Beautiful weather here in Utah, today.";
-        $scope.vote = "Yes";
-        $scope.bill = "H.B. 100";
-        $scope.comment = "It is important to remember what the American people want in regards to this bill.";
-
-    }]);
+    //.controller('View2Ctrl', ['$scope', function ($scope) {
+    //    $scope.name = "Orrin Hatch";
+    //    $scope.party = "R";
+    //    $scope.tweet = "Beautiful weather here in Utah, today.";
+    //    $scope.vote = "Yes";
+    //    $scope.bill = "H.B. 100";
+    //    $scope.comment = "It is important to remember what the American people want in regards to this bill.";
+    //
+    //}]);
