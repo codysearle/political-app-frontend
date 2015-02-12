@@ -10,7 +10,8 @@ angular.module('myApp', [
 	'myApp.landingPage',
     'myApp.sections',
     'myApp.version',
-    'restangular'
+    'myApp.register',
+    'restangular',
 
 ])
     .config(['$routeProvider', 'RestangularProvider', function ($routeProvider, RestangularProvider) {
