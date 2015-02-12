@@ -72,38 +72,47 @@
 </div>#}
 
 <div class="form-inline">
-    Enter Address: <input class="form-control" type="text" ng-model="address"/>
-    <button class="btn btn-danger" ng-click="pushAddress(address)">Add Address</button>
-    <div ng-repeat="official in officials">
+    <div class="panel panel col-md-4 col-md-offset-4 feed_color_body">
+        <div class="panel-heading feed_color_head_dem">
+            <div class="panel-title">Tell us where you live</div></div>
+            <div class="panel-body">
+                <input class="form-control" type="text" ng-model="address"/>
+                <br>
+                <button class="btn btn-default" ng-click="pushAddress(address)">Find your Reps</button>
+            </div>
 
-        <div>
-            <div class="panel panel col-md-4 col-md-offset-4 feed_color_body">
-                <div class="panel-heading feed_color_head_dem">
-                    <h3 class="panel-title"><img class="officialimg circular" src="{{official.photoUrl}}"/>
-                        <{{ official.name }} {{ official.party }}</h3>
-                </div>
-                <div class="panel-body">
-                    Email: {{ official.address }}
-                    <br>
-                    Vote: {{vote}}
-                    <br>
-                    Bill: {{bill}}
-                    <br>
-                    Floor Statements: "{{comment}}"
-                </div>
+    </div>
+</div>
+<div ng-repeat="official in officials">
+
+    <div id="testasdf">
+        <div class="panel panel col-md-4 col-md-offset-4 feed_color_body">
+            <div class="panel-heading feed_color_head_dem">
+                <h3 class="panel-title"><img class="officialimg circular" src="{{official.photoUrl}}"/>
+                    {{ official.name }}, {{ official.party }}</h3>
+            </div>
+            <div class="panel-body">
+                Email: {{ official.address }}
+                <br>
+                Vote: {{vote}}
+                <br>
+                Bill: {{bill}}
+                <br>
+                Floor Statements: "{{comment}}"
             </div>
         </div>
-
-        <!--<div>-->
-        <!--<img class="officialimg" src="{{official.photoUrl}}"/>-->
-        <!--{{ official.name }} :-->
-        <!--{{ official.email }} :-->
-        <!--{{ official.phone }}-->
-        <!--{{ official.party }} :-->
-        <!--{{ official.urls }} :-->
-        <!--{{ official.address }}-->
-<!--</div>-->
     </div>
+
+    <!--<div>-->
+    <!--<img class="officialimg" src="{{official.photoUrl}}"/>-->
+    <!--{{ official.name }} :-->
+    <!--{{ official.email }} :-->
+    <!--{{ official.phone }}-->
+    <!--{{ official.party }} :-->
+    <!--{{ official.urls }} :-->
+    <!--{{ official.address }}-->
+    <!--</div>-->
+</div>
 </div>
 
 <!--<div class="form-inline">-->
@@ -115,9 +124,9 @@
 <!--</div>-->
 
 <!--<div class="form-inline">-->
-    <!--Enter Address: <input class="form-control" type="text" ng-model="address">-->
-    <!--<button class="btn btn-info" ng-click="pushAddress(address)">Add Address</button>-->
-    <!--<p ng-repeat="id in elections" ,>-->
-        <!--&lt;!&ndash;{{ id.elections }} :&ndash;&gt;-->
-    <!--</p>-->
+<!--Enter Address: <input class="form-control" type="text" ng-model="address">-->
+<!--<button class="btn btn-info" ng-click="pushAddress(address)">Add Address</button>-->
+<!--<p ng-repeat="id in elections" ,>-->
+<!--&lt;!&ndash;{{ id.elections }} :&ndash;&gt;-->
+<!--</p>-->
 <!--</div>-->

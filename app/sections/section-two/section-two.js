@@ -1,5 +1,6 @@
 angular.module('myApp.sections')
 
+
     .controller('sectionTwoCtrl', ['$scope', function ($scope) {
         $scope.name = "Peter Anderson";
         $scope.party = "?";
