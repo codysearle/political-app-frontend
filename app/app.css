@@ -124,7 +124,7 @@ body {
 	-webkit-border-radius: 150px;
 	-moz-border-radius: 150px;
 }
-#testasdf {
+#infade {
     margin-top: 25px;
     /*font-size: 21px;*/
 
@@ -164,4 +164,22 @@ body {
     to {
         opacity: 1;
     }
+}
+.fa {
+    font-size: 2em;
+}
+.fa-facebook-official {
+    color:#3b5999;
+}
+.fa-twitter {
+    color:#55acee;
+}
+.fa-youtube-square {
+    color:#eb2828;
+}
+.fa-google-plus-square {
+    color: #dd4b39;
+}
+.fa-envelope {
+    color: black;
 }

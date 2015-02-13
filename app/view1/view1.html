@@ -89,7 +89,7 @@
         <!--<div ng-repeat="office in offices">-->
             <!--{{official}}-->
 
-            <div id="testasdf">
+            <div id="infade">
                 <div class="panel panel col-md-4 col-md-offset-4 feed_color_body">
                     <div class="panel-heading feed_color_head_dem">
                         <h3 class="panel-title"><img class="officialimg circular" src="{{official.photoUrl}}"/>
@@ -100,13 +100,18 @@
                         <div ng-repeat="office in offices.name">Phone: {{ name }}</div>
                         <br>
 
-                        <div ng-repeat="email in official.emails">Email: {{ email }}</div>
+                        <div ng-repeat="email in official.emails"><a href="mailto:{{ email }}"><i class="fa fa-envelope"></i>{{ email }}</a></div>
                         <br>
 
-                        <div ng-repeat="channel in official.channels">{{ channel.type }}: {{ channel.id }}</div>
+                        <div ng-repeat="channel in official.channels">
+                            <span ng-show="channel.type === 'Facebook'"><a ng-href="https://www.facebook.com/{{ channel.id }}" target="_blank"><i class="fa fa-facebook-official"></i></a></span>
+                            <span ng-show="channel.type === 'Twitter'"><a ng-href="https://www.twitter.com/{{ channel.id }}" target="_blank"><i class="fa fa-twitter"></i></a></span>
+                            <span ng-show="channel.type === 'YouTube'"><a ng-href="https://www.youtube.com/user/{{ channel.id }}" target="_blank"><i class="fa fa-youtube-square"></i></a></span>
+                            <span ng-show="channel.type === 'GooglePlus'"><a ng-href="https://plus.google.com/{{ channel.id }}" target="_blank"><i class="fa fa-google-plus-square"></i></a></span>
+                        </div>
                         <br>
 
-                        <div ng-repeat="phone in official.phones">Phone: {{ phone }}</div>
+                        <div ng-repeat="phone in official.phones"><i class="fa fa-phone"></i>: {{ phone }}</div>
                     </div>
                 </div>
             <!--</div>-->
