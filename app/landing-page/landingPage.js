@@ -9,6 +9,16 @@ angular.module('myApp.landingPage', ['ngRoute'])
   });
 }])
 
-.controller('LandingPageCtrl', [function() {
 
+
+
+.controller('LandingPageCtrl', ['$scope', '$location', '$anchorScroll', function($scope, $location, $anchorScroll) {
+    $scope.scrollTo = function(id) {
+        $location.hash(id);
+        $anchorScroll();
+   }
+}])
+
+.run(['$anchorScroll', function($anchorScroll) {
+  $anchorScroll.yOffset = 100;   // always scroll by 50 extra pixels
 }]);

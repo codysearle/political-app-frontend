@@ -135,7 +135,7 @@ body {
 }
 
 .video-position {
-    margin-left: 7.5vw;
+    /*margin-left: 7.5vw;*/
     position: absolute;
     z-index: -5;
 }
@@ -169,15 +169,15 @@ body {
 }
 
 @media(max-width:639px) {
+
     .btn-default {
         display: inline-block;
-        width: 5vw;
         font-size: 2vm;
         text-align: center;
     }
 
-    .intro-message h1 {
-
+    .intro-message > h1 {
+        padding-top: 15%;
         text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
         font-size: 3em;
     }
@@ -211,7 +211,8 @@ body {
 
 .navbar-default {
     background-color: #0B3254;
-    border-color: #e7e7e7;
+    border-color: #ef0001;
+    border-bottom-width: 4px;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -228,4 +229,28 @@ body {
 
 .navbar-default .navbar-brand:hover {
     color: #c1bcbc
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 5px 5px 5px #969696;
+}
+
+.content-section-a {
+    margin-top: 210px;
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+.intro-message > h1 {
+        text-shadow: 3px 3px 3px rgba(0,0,0,0.6);
+        font-size: 3.5em;
+    }
+
+.intro-message h3 {
+
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+    font-size: 2.5em;
 }
