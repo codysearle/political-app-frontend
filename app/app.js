@@ -5,6 +5,7 @@ angular.module('myApp', [
     'ngRoute',
     'ngCookies',
     'myApp.login',
+    'myApp.logout',
     'myApp.view1',
     'myApp.view2',
 	'myApp.landingPage',

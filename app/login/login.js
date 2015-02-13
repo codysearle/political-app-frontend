@@ -29,4 +29,4 @@ angular.module('myApp.login', ['ngRoute', 'ngCookies'])
                         $location.path('/landing-page');
                     });
             };
-        });
+        })
