@@ -9,18 +9,27 @@ angular.module('myApp.view1', ['ngRoute', 'restangular'])
         });
     }])
 
+    .directive('ngSparkline', function () {
+        return {
+            restrict: 'A',
+            require: '^ngModel',
+            template: '<div class="sparkline"><h4>Weather for {{ngModel}}</h4></div>'
+        }
+    })
+
+
     .factory('RepRestangular', function (Restangular) {
         return Restangular.withConfig(function (RestangularConfigurer) {
             RestangularConfigurer.setBaseUrl('https://www.googleapis.com');
         })
     })
 
-    //.factory('VoterRestangular', function (Restangular) {
-    //    return Restangular.withConfig(function (RestangularConfigurer) {
-    //        RestangularConfigurer.setBaseUrl('https://www.googleapis.com');
-    //    })
-    //})
-    //VoterRestangular(return this to factory header)
+    .factory('TweetRestangular', function (Restangular) {
+        return Restangular.withConfig(function (RestangularConfigurer) {
+            RestangularConfigurer.setBaseUrl('https://congress.api.sunlightfoundation.com');
+        })
+    })
+
 
     .factory('ElectionRestangular', function (Restangular) {
         return Restangular.withConfig(function (RestangularConfigurer) {
@@ -29,7 +38,7 @@ angular.module('myApp.view1', ['ngRoute', 'restangular'])
     })
 
 
-    .factory('Query', function(RepRestangular, $q, ElectionRestangular) {
+    .factory('Query', function (RepRestangular, $q, ElectionRestangular) {
 
         var query = [];
 
@@ -46,25 +55,10 @@ angular.module('myApp.view1', ['ngRoute', 'restangular'])
 
             return deferred.promise;
         };
-        
 
-        //query.voterQuery = function (queryString) {
-        //    var deferred = $q.defer();
-        //    VoterRestangular.one('civicinfo/v2/voterinfo?key=AIzaSyD-HPE_alWclw0dk45SVc87VhH1FJT-j5o&address=' + queryString)
-        //        .get()
-        //        .then(function (data) {
-        //            deferred.resolve(data);
-        //        }, function (error) {
-        //            alert("error " + error);
-        //            deferred.reject(error)
-        //        });
-        //
-        //    return deferred.promise;
-        //};
-
-        query.electionQuery = function (queryString) {
+        query.electionQuery = function () {
             var deferred = $q.defer();
-            ElectionRestangular.one('civicinfo/v2/elections?key=AIzaSyD-HPE_alWclw0dk45SVc87VhH1FJT-j5o&address=' + queryString)
+            ElectionRestangular.one('civicinfo/v2/elections?key=AIzaSyD-HPE_alWclw0dk45SVc87VhH1FJT-j5o&address=Provo%20UT')
                 .get()
                 .then(function (data) {
                     deferred.resolve(data);
@@ -77,33 +71,48 @@ angular.module('myApp.view1', ['ngRoute', 'restangular'])
         };
 
         return query;
-        
+
     })
 
+    .factory('Tweet', function (TweetRestangular, $q) {
 
-    .controller('View1Ctrl', ['Query', '$scope', function (Query, $scope) {
+        var tweet = [];
+
+        tweet.repTweet = function (queryString) {
+            var deferred = $q.defer();
+            TweetRestangular.one('legislators?apikey=91ccd95b48094ed6801f4fb39113f0f2' + queryString)
+                .get()
+                .then(function (data) {
+                    deferred.resolve(data);
+                }, function (error) {
+                    alert("error " + error);
+                    deferred.reject(error)
+                });
+
+            return deferred.promise;
+        };
+
+        return tweet;
+    })
+
+    .controller('View1Ctrl', ['Query','Tweet', '$scope', function (Query, Tweet, $scope) {
 
         $scope.address = '';
 
-        $scope.pushAddress = function(address) {
+        $scope.pushAddress = function (address) {
 
-            Query.repQuery(address).then(function (data){
+            Query.repQuery(address).then(function (data) {
                 $scope.officials = data.officials;
-            }, function(error){
+            }, function (error) {
                 //code
             });
 
-            //Query.voterQuery(address).then(function (data){
-            //    $scope.pollingLocations = data.pollingLocations;
-            //}, function(error){
-            //    //code
-            //});
-
-            Query.electionQuery(address).then(function (data){
+            Query.electionQuery(address).then(function (data) {
                 $scope.elections = data.elections;
-            }, function(error){
+            }, function (error) {
                 //code
             });
         }
+
 
     }]);
