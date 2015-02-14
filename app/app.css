@@ -183,3 +183,142 @@ body {
 .fa-envelope {
     color: black;
 }
+
+/*.container { position:fixed; }*/
+.container video {
+    /*position:fixed;*/
+    /*z-index:0;*/
+}
+
+.intro-divider {
+    width: 50vw;
+    margin-left: 25vw;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.video-position {
+    /*margin-left: 7.5vw;*/
+    position: absolute;
+    z-index: -5;
+}
+
+@media(max-width:767px) {
+    /*.btn {*/
+        /*display: inline-block;*/
+        /*width: 5vw;*/
+        /*font-size: 2vm;*/
+        /*text-align: center;*/
+    /*}*/
+
+    .intro-divider
+
+    .banner h2 {
+        margin: 0;
+        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+        font-size: 3em;
+    }
+
+    ul.banner-social-buttons > li {
+
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.banner-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media(max-width:639px) {
+
+    .btn-default {
+        display: inline-block;
+        font-size: 2vm;
+        text-align: center;
+    }
+
+    .intro-message > h1 {
+        padding-top: 15%;
+        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+        font-size: 3em;
+    }
+
+    .intro-message h3 {
+
+        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+        font-size: 2.5em;
+    }
+
+
+    .banner h2 {
+        margin: 0;
+        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+        font-size: 3em;
+    }
+
+    ul.banner-social-buttons > li {
+
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.banner-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Index.html navbar */
+
+.navbar-default {
+    background-color: #0B3254;
+    border-color: #ef0001;
+    border-bottom-width: 4px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #e7e7e7
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #c1bcbc
+}
+
+.navbar-default .navbar-brand {
+    color: #e7e7e7
+}
+
+.navbar-default .navbar-brand:hover {
+    color: #c1bcbc
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 5px 5px 5px #969696;
+}
+
+.content-section-a {
+    margin-top: 210px;
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+.intro-message > h1 {
+        text-shadow: 3px 3px 3px rgba(0,0,0,0.6);
+        font-size: 3.5em;
+    }
+
+.intro-message h3 {
+
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+    font-size: 2.5em;
+}
+/*.content-section-b {*/
+    /*margin-top: 210px;*/
+    /*padding: 50px 0;*/
+    /*background-color: #f8f8f8;*/
+/*}*/

@@ -1,0 +1,185 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+html {
+    background: url(images/capitolbuilding.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.floatingtexttest {
+    z-index: 100;
+    color: white;
+    font-weight: bold;
+
+}
+
+/*body {*/
+/*background-image: url(images/americanflagedited.jpg);*/
+/*}*/
+
+.navbar-default {
+    border-color: inherit;
+    background-color: inherit;
+}
+
+body {
+    background-color: inherit;
+    color: inherit;
+}
+
+#a {
+    background-image: url(images/americanflagedited.jpg);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#b {
+    background-color: red;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#c {
+    background-color: blue;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#d {
+    background-color: #ffff00;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#e {
+    background-color: #008000;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.company_title {
+    font-family: 'tinymce', Arial;
+    color: red;
+    font-weight: bold;
+}
+
+.blah {
+    text-align: right;
+}
+
+.feed_color_body {
+    background-color: rgba(225, 225, 225, .95);
+    /*background-image: url(images/americanflag.jpg);*/
+}
+
+.feed_color_head {
+    border-color: black;
+    color: rgb(150, 0, 0);
+}
+
+.feed_color_head_dem {
+    border-color: black;
+    color: rgb(0, 0, 150);
+}
+
+.navcolor {
+    color: black;
+}
+
+.officialimg {
+    width: 75px;
+	height: 75px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+}
+#infade {
+    margin-top: 25px;
+    /*font-size: 21px;*/
+
+    animation: fadein 3s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.fa {
+    font-size: 2em;
+}
+.fa-facebook-official {
+    color:#3b5999;
+}
+.fa-twitter {
+    color:#55acee;
+}
+.fa-youtube-square {
+    color:#eb2828;
+}
+.fa-google-plus-square {
+    color: #dd4b39;
+}
+.fa-envelope {
+    color: black;
+}
