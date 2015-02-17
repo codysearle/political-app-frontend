@@ -14,7 +14,7 @@ angular.module('myApp', [
 
 ])
     .config(['$routeProvider', 'RestangularProvider', function ($routeProvider, RestangularProvider) {
-        $routeProvider.otherwise({redirectTo: '/landing-page'});
+        $routeProvider.otherwise({redirectTo: '/'});
 
         RestangularProvider.setBaseUrl('http://localhost:8004');
     }])
@@ -25,7 +25,7 @@ angular.module('myApp', [
             //document.getElementById("main").style.display = "block";
             //$location.path('/login')
         } else {
-            $location.path('/login')
+            $location.path('/landing-page')
         }
 
         // Add auth token to every Restangular request
