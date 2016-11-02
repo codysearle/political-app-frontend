@@ -1,24 +1,47 @@
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+<div class="container-fluid">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="panel panel-default" style="margin-top:65px;">
+            <div class="panel-heading">
+                <h3 class="panel-title">Welcome to Nationalus!</h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-lg-4 col-lg-offset-1">
+                    <h4>Sign in here:</h4>
+                    <form role="form" name="login" ng-submit="performLogin()" class="form-login">
+                        <input type="text" ng-model="username" class="form-control form-group" placeholder="Username">
+                        <input type="password" ng-model="password" class="form-control form-group" placeholder="Password">
+                        <button type="button" class="btn btn-primary" ng-click="performLogin()">Login</button>
+                    </form>
+                </div>
+                <div class="col-lg-4 col-lg-offset-2">
+                    <h4>New User? Register here!</h4>
+                    <form role="form" name="registerForm" ng-submit="doRegister()"
+                          ng-disabled="disabled" class="form-register">
+                        <!--
+                            <input type="text" name="email" ng-model="user.email" placeholder="Email Address" required="required" class="form-control form-group"/>
+                        -->
+                        <input type="text" name="username" ng-model="username" placeholder="User Name"
+                               required="required"
+                               class="form-control form-group"/>
+                        <input type="text" name="first_name" ng-model="first_name" placeholder="First name"
+                               required="required"
+                               class="form-control form-group"/>
+                        <input type="text" name="last_name" ng-model="last_name" placeholder="Last name"
+                               required="required"
+                               class="form-control form-group"/>
+                        <input type="text" name="email" ng-model="email" placeholder="Email" required="required"
+                               class="form-control form-group"/>
+                        <input type="password" name="password" ng-model="password" placeholder="Password"
+                               required="required"
+                               class="form-control form-group"/>
 
-<div>
-    Log in
-</div>
-
-<div style="margin-top:50px;">
-    <div>
-        Username: <input ng-model="username"/>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                        &nbsp;<a href="#/landing-page">
+                        <button type="button" class="btn btn-primary">Cancel</button>
+                    </a>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-    <div style="margin-top: 20px;">
-        Password: <input ng-model="password"/>
-    </div>
 </div>
-
-<button ng-click="performLogin()">Login</button>
-
-</body>
-</html>

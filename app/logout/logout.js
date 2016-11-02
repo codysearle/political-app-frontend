@@ -20,7 +20,6 @@ angular.module('myApp.logout', ['ngRoute', 'ngCookies'])
             $scope.performLogout = function () {
 
                 $cookieStore.remove('djangotoken');
-                $location.path('/landing-page');
-
+                $location.path('/logout-confirm');
             };
         });

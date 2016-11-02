@@ -6,6 +6,7 @@ angular.module('myApp', [
     'ngCookies',
     'myApp.login',
     'myApp.logout',
+    'myApp.logoutConfirm',
     'myApp.view1',
     'myApp.view2',
 	'myApp.landingPage',
